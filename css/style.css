@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  background-color: #f0f8ff;
+  width: 80%;
+  margin: 0 auto;
+  height: 600px;
+  border: 5px solid black;
+  border-radius: 5px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.commands {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+}
+
+.floor-container {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  animation: floor-animation 1.85s infinite linear;
+}
+
+.floor {
+  width: 50px;
+  height: 50px;
+}
+
+.mario {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 50px;
+  left: 120px;
+  width: 130px;
+  height: 130px;
+}
+
+.jump {
+  animation: jump-animation 0.5s infinite ease-out;
+}
+
+.pipe {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  width: 90px;
+  height: 80px;
+  animation: pipe-animation 2s infinite linear;
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -90px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes floor-animation {
+  from {
+    right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump-animation {
+  0% {
+    bottom: 50px;
+  }
+
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 50px;
+  }
+}
