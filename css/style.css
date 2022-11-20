@@ -6,7 +6,7 @@
 
 .container {
   position: relative;
-  background-color: #f0f8ff;
+  background: linear-gradient(#87ceeb, #e0f6ff);
   width: 80%;
   margin: 0 auto;
   height: 600px;
@@ -58,6 +58,15 @@
   animation: pipe-animation 2s infinite linear;
 }
 
+.clouds {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 500px;
+  height: 180px;
+  animation: clounds-animation 6s infinite linear;
+}
+
 @keyframes pipe-animation {
   from {
     right: -90px;
@@ -70,6 +79,15 @@
 @keyframes floor-animation {
   from {
     right: 0;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes clounds-animation {
+  from {
+    right: -500px;
   }
   to {
     right: 100%;
